@@ -1,0 +1,5 @@
+1. Streamlit -> untuk membuat aplikasi Web Python
+2. Pandas -> Menangani Data
+3. Matplotlib dan Seaborn -> Visualisasi Data
+4. Base64 -> Web Scraping 
+5. Numpy -> Data Angka
