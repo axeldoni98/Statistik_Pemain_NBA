@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 import base64
-import matplotlib.pyplot as plt
-import seaborn as sns
 import numpy as np
 
 # membuat judul
@@ -51,17 +49,3 @@ def filedownload(df):
     href = f'<a href="data:file/csv;base64,{b64}" download="playerstats.csv">Download CSV File</a>'
     return href
 st.markdown(filedownload(df_tim_dipilih),unsafe_allow_html=True)
-
-# membuat Heatmap
-# if st.button("Intercorrelation Heatmap"):
-    #st.header("intercorrelatuin Matrix Heatmap")
-    #df_tim_dipilih.to_csv('output.csv',index=False)
-    #df = pd.read_csv('output.csv')
-
-    #corr = df.corr()
-   # mask = np.zeros_like(corr)
-   # mask[np.tril_indices_from(mask)] = True
-   # with sns.axes_style("white"):
-   #     f, ax = plt.subplots(figsize=(7,5))
-   #     ax = sns.heatmap(corr, mask=mask, vmax=1, square=True)
-   # st.pyplot()
