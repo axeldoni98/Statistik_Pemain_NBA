@@ -21,7 +21,7 @@ def load_data(year):
     url = "https://www.basketball-reference.com/leagues/NBA_" + str(year) + "_per_game.html"
     html = pd.read_html(url, header=0)
     df = html[0]
-    raw = df.drop(df[df.Age == 'Umur'].index)
+    raw = df.drop(df[df.Age == 'Age'].index)
     raw = raw.fillna(0)
     statistik_pemain = raw.drop(['Rk'],axis=1)
     return statistik_pemain
